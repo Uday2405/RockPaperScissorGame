@@ -8,7 +8,6 @@
     localStorage.setItem('score',JSON.stringify(score));
     scoreElement.innerHTML=`Wins:${score.Wins}.loose:${score.losses}.Ties:${score.ties}`;
     }
-alert('hello');
     let resultElement=document.querySelector('.js-result');
     let scoreElement=document.querySelector('.js-score'); 
     let moveElement=document.querySelector('.js-moves');
