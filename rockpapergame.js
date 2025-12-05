@@ -4,6 +4,7 @@
     score.Wins=0;
     score.losses=0;
     score.ties=0;
+    hello.JSON=0;
     localStorage.setItem('score',JSON.stringify(score));
     scoreElement.innerHTML=`Wins:${score.Wins}.loose:${score.losses}.Ties:${score.ties}`;
     }
