@@ -129,7 +129,7 @@ Wins : ${score.Wins}, Losses : ${score.losses}, Ties: ${score.ties}`);
 
     function autoplay(){
       if(!isAutoplaying){
-      intervalId=setInterval(function(){
+      intervalId=setInterval(()=>{
         const playerMove=computerMovefunction();
         playGame(playerMove)
       },20);
