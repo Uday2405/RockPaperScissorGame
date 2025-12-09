@@ -22,6 +22,30 @@
    };
   }
 
+  document.body.addEventListener('keydown',(event)=>{
+    if(event.key==='r'||event.key==='R'){
+      playGame('Rock');
+    }else if(event.key==='p'){
+      playGame('Paper');
+    }else if(event.key==='s'){
+      playGame('Scissors');
+    }
+    // console.log(event.key);
+  });
+  let rockElement=document.querySelector('.js-rock').addEventListener('click',function(){
+    playGame('Rock');
+  }
+  );
+
+  let paperElement=document.querySelector('.js-paper').addEventListener('click',()=>{
+    playGame('Paper');
+  });
+  let scissorElement=document.querySelector('.js-scissor').addEventListener('click',()=>{
+    playGame('Scissors');
+  });
+
+  
+
     
     function playGame(playerMove){
       let computerMove=computerMovefunction();
@@ -126,7 +150,7 @@ Wins : ${score.Wins}, Losses : ${score.losses}, Ties: ${score.ties}`);
     isAutoplaying=false;
     let autoElement=document.querySelector('.js-autoplay');
 
-
+    
     function autoplay(){
       if(!isAutoplaying){
       intervalId=setInterval(()=>{
